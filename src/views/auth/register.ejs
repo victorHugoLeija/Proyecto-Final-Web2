@@ -1,0 +1,39 @@
+
+<% title = "Registro" %>
+<div class="boing-container">
+  <section class="boing-intro" style="max-width: 400px;">
+    <h1 class="boing-title">Registro</h1>
+    <% if (error) { %>
+      <div class="boing-text boing-highlight" style="margin-bottom:1rem;"><%= error %></div>
+    <% } %>
+    <form action="/auth/register" method="POST" class="boing-form">
+      <input
+        type="text"
+        name="name"
+        placeholder="Nombre completo"
+        class="boing-input"
+        required
+      />
+      <input
+        type="email"
+        name="email"
+        placeholder="Correo electrónico"
+        class="boing-input"
+        required
+      />
+      <input
+        type="password"
+        name="password"
+        placeholder="Contraseña"
+        class="boing-input"
+        required
+      />
+      <select name="role" class="boing-select">
+        <option value="user">Usuario</option>
+        <option value="admin">Admin</option>
+      </select>
+      <button type="submit" class="boing-btn">Registrar</button>
+      <a href="/auth/login" class="boing-btn boing-btn-small" style="margin-top:1rem;">Ya tengo una cuenta</a>
+    </form>
+  </section>
+</div>

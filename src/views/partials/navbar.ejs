@@ -1,0 +1,23 @@
+
+<nav class="boing-navbar">
+  <div class="boing-navbar-brand">
+    <a href="/" class="boing-navbar-logo">🥤 Top tierlists</a>
+  </div>
+  <ul class="boing-navbar-links">
+    <li><a href="/" class="boing-navbar-link">Home</a></li>
+    <% if (!user) { %>
+      <li><a href="/auth/register" class="boing-navbar-link">Registrarse</a></li>
+      <li><a href="/auth/login" class="boing-navbar-link">Login</a></li>
+    <% } else { %>
+      <% if (user.role === "admin") { %>
+        <li><a href="/admin/dashboard" class="boing-navbar-link">Admin</a></li>
+      <% } %>
+      <li><a href="/user/profile" class="boing-navbar-link">Perfil</a></li>
+      <li>
+        <form action="/auth/logout" method="POST" style="display:inline;">
+          <button type="submit" class="boing-navbar-link boing-navbar-logout">Logout</button>
+        </form>
+      </li>
+    <% } %>
+  </ul>
+</nav>

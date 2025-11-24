@@ -1,0 +1,36 @@
+{
+  "name": "proyecto-final-web2",
+  "version": "1.0.0",
+  "description": "En este repositorio se subira un proyecto de node.js con un login y una pagina principal",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon src/server.js"
+  },
+  "dependencies": {
+    "bcrypt": "^6.0.0",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.2.3",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
+    "jsonwebtoken": "^9.0.2",
+    "mysql2": "^3.15.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/victorHugoLeija/Proyecto-Final-Web2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/victorHugoLeija/Proyecto-Final-Web2/issues"
+  },
+  "homepage": "https://github.com/victorHugoLeija/Proyecto-Final-Web2#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.22",
+    "nodemon": "^3.1.11",
+    "postcss": "^8.5.6"
+  }
+}

@@ -1,0 +1,55 @@
+
+<% title = "Panel de Administración" %>
+<div class="boing-container">
+  <section class="boing-intro" style="max-width: 800px;">
+    <h1 class="boing-title">Panel de Administración</h1>
+    <form method="GET" action="/admin/dashboard" class="boing-form" style="margin-bottom:1.5rem;">
+      <input
+        type="text"
+        name="search"
+        value="<%= search || '' %>"
+        placeholder="Buscar por nombre o email..."
+        class="boing-input"
+      />
+      <select name="role" class="boing-select">
+        <option value="">Todos los roles</option>
+        <option value="admin" <%= role === "admin" ? "selected" : "" %>>Admin</option>
+        <option value="user" <%= role === "user" ? "selected" : "" %>>Usuario</option>
+      </select>
+      <button type="submit" class="boing-btn">Buscar</button>
+    </form>
+    <p class="boing-text">Usuarios registrados: <span class="boing-highlight"><%= users.length %></span></p>
+    <div class="boing-table-wrapper">
+      <table class="boing-table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Email</th>
+            <th>Rol</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% users.forEach(u => { %>
+            <tr>
+              <td><%= u.id %></td>
+              <td><%= u.name %></td>
+              <td><%= u.email %></td>
+              <td><%= u.role %></td>
+              <td>
+                <% if (u.id !== user.id) { %>
+                  <form action="/admin/dashboard/delete/<%= u.id %>" method="POST" onsubmit="return confirm('¿Eliminar usuario?');" style="display:inline;">
+                    <button type="submit" class="boing-btn boing-btn-small">Eliminar</button>
+                  </form>
+                <% } else { %>
+                  <span class="boing-tier">Tú</span>
+                <% } %>
+              </td>
+            </tr>
+          <% }) %>
+        </tbody>
+      </table>
+    </div>
+  </section>
+</div>

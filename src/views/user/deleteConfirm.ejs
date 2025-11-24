@@ -1,0 +1,16 @@
+
+<div class="boing-container">
+    <section class="boing-intro" style="max-width: 400px;">
+        <h1 class="boing-title">¿Eliminar Cuenta?</h1>
+        <p class="boing-text">
+            Esta acción <span class="boing-highlight">no se puede deshacer</span>.<br>
+            Se eliminará tu cuenta y todos tus datos permanentemente.
+        </p>
+        <div style="display:flex; gap:1rem; margin-top:2rem;">
+            <a href="/user/profile" class="boing-btn boing-btn-small">Cancelar</a>
+            <form action="/user/profile/delete-account" method="POST" style="display:inline;">
+                <button type="submit" class="boing-btn boing-btn-small" style="background:#ff5e62;color:#fff;">Sí, eliminar mi cuenta</button>
+            </form>
+        </div>
+    </section>
+</div>

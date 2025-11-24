@@ -1,0 +1,260 @@
+/* Fondo degradado y container principal */
+.boing-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #7f7fd5 0%, #86a8e7 50%, #43cea2 100%);
+    font-family: 'Segoe UI', 'Arial', sans-serif;
+    padding: 0 1rem;
+}
+
+/* Navbar moderno y colorido */
+.boing-navbar {
+    width: 100%;
+    background: linear-gradient(90deg, #7f7fd5 0%, #43cea2 100%);
+    box-shadow: 0 2px 12px rgba(67,206,162,0.12);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 2rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.boing-navbar-brand {
+    display: flex;
+    align-items: center;
+}
+.boing-navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #fff;
+    text-shadow: 2px 2px 0 #43cea2;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: color 0.2s;
+}
+.boing-navbar-logo:hover {
+    color: #86a8e7;
+}
+.boing-navbar-links {
+    list-style: none;
+    display: flex;
+    gap: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+.boing-navbar-link {
+    color: #fff;
+    font-size: 1.08rem;
+    font-weight: 500;
+    text-decoration: none;
+    padding: 0.4em 1em;
+    border-radius: 1em;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: inline-block;
+}
+.boing-navbar-link:hover, .boing-navbar-link:focus {
+    background: #e0e7ff;
+    color: #43cea2;
+    transform: scale(1.08);
+}
+.boing-navbar-logout {
+    background: #e0e7ff;
+    color: #43cea2;
+    font-weight: bold;
+    border: none;
+    padding: 0.4em 1em;
+    border-radius: 1em;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s, transform 0.2s;
+}
+.boing-navbar-logout:hover {
+    background: #86a8e7;
+    color: #fff;
+    transform: scale(1.08);
+}
+
+/* Formularios y campos */
+.boing-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+.boing-input, .boing-select {
+    padding: 0.7em 1em;
+    border-radius: 1em;
+    border: 2px solid #43cea2;
+    font-size: 1rem;
+    background: #e0e7ff;
+    color: #333;
+    outline: none;
+    transition: border-color 0.2s;
+}
+.boing-input:focus, .boing-select:focus {
+    border-color: #7f7fd5;
+}
+.boing-btn-small {
+    font-size: 0.95rem;
+    padding: 0.5em 1.2em;
+    margin: 0.5em 0.5em 0.5em 0;
+    display: inline-block;
+}
+
+/* Tablas */
+.boing-table-wrapper {
+    overflow-x: auto;
+    margin-top: 1.5rem;
+}
+.boing-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: #e0e7ff;
+    border-radius: 1em;
+    box-shadow: 0 2px 12px rgba(67,206,162,0.08);
+    overflow: hidden;
+}
+.boing-table th, .boing-table td {
+    padding: 0.8em 1em;
+    text-align: left;
+}
+.boing-table th {
+    background: linear-gradient(90deg, #7f7fd5 60%, #43cea2 100%);
+    color: #fff;
+    font-weight: bold;
+    border-bottom: 2px solid #43cea2;
+}
+.boing-table tr {
+    border-bottom: 1px solid #86a8e7;
+}
+.boing-table tr:last-child {
+    border-bottom: none;
+}
+.boing-table td {
+    color: #333;
+}
+.boing-table tr:hover {
+    background: #43cea244;
+}
+
+/* Header */
+.boing-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+.boing-title {
+    font-size: 2.8rem;
+    font-weight: bold;
+    color: #7f7fd5;
+    text-shadow: 2px 2px 0 #43cea2, 4px 4px 0 #86a8e7;
+}
+.boing-subtitle {
+    font-size: 1.5rem;
+    color: #43cea2;
+    margin-top: 0.5rem;
+}
+
+/* Intro Section */
+.boing-intro {
+    background: rgba(255,255,255,0.92);
+    border-radius: 1.5rem;
+    box-shadow: 0 4px 24px rgba(67,206,162,0.15);
+    padding: 2rem;
+    max-width: 600px;
+    margin-bottom: 2rem;
+    width: 100%;
+    box-sizing: border-box;
+}
+.boing-text {
+    font-size: 1.1rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+.boing-highlight {
+    color: #7f7fd5;
+    font-weight: bold;
+    background: linear-gradient(90deg, #e0e7ff 60%, #43cea2 100%);
+    border-radius: 0.3em;
+    padding: 0.1em 0.3em;
+}
+.boing-tier {
+    color: #43cea2;
+    font-weight: bold;
+}
+
+/* Botón CTA */
+.boing-cta {
+    margin: 2rem 0;
+    text-align: center;
+}
+.boing-btn {
+    background: linear-gradient(90deg, #7f7fd5 0%, #43cea2 100%);
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    padding: 0.8em 2em;
+    border: none;
+    border-radius: 2em;
+    box-shadow: 0 2px 8px rgba(67,206,162,0.2);
+    cursor: pointer;
+    text-decoration: none;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin: 0.5em 0.5em 0.5em 0;
+    display: inline-block;
+}
+.boing-btn:hover {
+    transform: scale(1.08);
+    box-shadow: 0 4px 16px rgba(67,206,162,0.3);
+    background: linear-gradient(90deg, #43cea2 0%, #7f7fd5 100%);
+}
+
+/* Footer */
+.boing-footer {
+    margin-top: 2rem;
+    text-align: center;
+}
+.boing-footer-text {
+    color: #7f7fd5;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+/* Responsividad y separación de botones */
+@media (max-width: 600px) {
+    .boing-intro {
+        padding: 1rem;
+        max-width: 98vw;
+    }
+    .boing-table th, .boing-table td {
+        padding: 0.5em 0.5em;
+        font-size: 0.95rem;
+    }
+    .boing-title {
+        font-size: 2rem;
+    }
+    .boing-btn, .boing-btn-small {
+        width: 100%;
+        margin: 0.5em 0;
+        font-size: 1rem;
+        padding: 0.7em 1em;
+        text-align: center;
+        display: block;
+    }
+    .boing-navbar {
+        flex-direction: column;
+        padding: 0.5rem 1rem;
+    }
+    .boing-navbar-links {
+        flex-direction: column;
+        gap: 0.5rem;
+        width: 100%;
+        align-items: flex-start;
+    }
+}
